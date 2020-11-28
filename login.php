@@ -15,7 +15,7 @@
  if($count == 1) {
  $_SESSION['login_user'] = $user;
 
- header("location: ../Dashboard.php");
+echo ":D";
  }else {
  echo "Your username or password is invalid";
 echo "<br />";

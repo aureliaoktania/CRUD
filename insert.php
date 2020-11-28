@@ -2,11 +2,11 @@
 include("config.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Pname       = $_POST['product_name'];
-    $Pcode       = $_POST['product_code'];
-    $Pcategory   = $_POST['product_category'];
-    $Pprice      = $_POST['product_price'];
-    $Pstock      = $_POST['product_stock'];
+    $Pname       = $_POST['productName'];
+    $Pcode       = $_POST['productCode'];
+    $Pcategory   = $_POST['productCategory'];
+    $Pprice      = $_POST['productPrice'];
+    $Pstock      = $_POST['productStock'];
 
 
 

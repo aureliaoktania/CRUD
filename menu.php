@@ -13,32 +13,13 @@
   <body>
   
   
-   <nav class="navbar navbar-expand-md navbar-primary fixed-top bg-primary">
-      <a class="navbar-brand" href="">♛ Toys Town</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
- 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Dasboard<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Stock</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-      
-    <div class="jumbotron">
-        <h1 class="display-4">Welcome  to Toys Town</h1>
-        <p class="lead">Set and manage your store inventory here.</p>
-        <hr class="my-4">
-        <p>Click the <strong>Stock</strong> Page to manage your shop inventory</p><br>
-         <a class="btn btn-danger btn-lg" href="#" role="button"> ← Logout</a>    
-        <a class="btn btn-primary btn-lg" href="#" role="button"> ♥ See about me</a>
-    </div>
+  <div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
   
   </body>
    <script src="./js/jquery.min.js"></script>

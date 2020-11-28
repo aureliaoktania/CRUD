@@ -13,10 +13,10 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="lu tambahin ae mau kemane">Dasboard<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="lu tambahin ae mau kemane">Display<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="jee mau kemane ">Stock</a>
+            <a class="nav-link" href="jee mau kemane ">Input</a>
           </li>
         </ul>
       </div>
@@ -26,8 +26,7 @@
         <h1 class="display-4">Manage Inventory</h1>
         <p class="lead">Set and manage your store inventory here.</p>
         <hr class="my-4">
-        <p>Click the <strong>Add New</strong> to insert new inventory</p><br>
-        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#newprod">Add New</button> 
+        <p>Click the <strong>Add New</strong> to insert new inventory</p>
     </div>
 <div class="container">
 <h1>Filter</h1>
@@ -38,7 +37,7 @@
    <input type="text" name="nama" class="form-control" value=""/><hr>
 
    Code
-   <input type="text" name="nama" class="form-control" value=""/><hr> <br>
+   <input type="text" name="code" class="form-control" value=""/><hr> <br>
 </div>
  </div>
 

@@ -29,7 +29,30 @@
         <p>Click the <strong>Add New</strong> to insert new inventory</p>
     </div>
 
-    disini
+  <div class="container-md">
+         <div class="form-group">
+   
+                    <label>Product Name</label>
+                    <input type="text" class="form-control product_name" name="product_name">
+                </div>
+                <div class="form-group">
+                    <label>Product Code</label>
+                    <input type="text" class="form-control product_code" name="product_code" >
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" class="form-control product_category" name="product_category">
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control product_price" name="product_price" >
+                </div>
+                <div class="form-group">
+                    <label>Stock Count</label>
+                    <input type="text" class="form-control product_stock" name="product_stock" >
+                </div>
+  </form>
+  </div>
 </body>
 <script src="./js/bootstrap.min.js"></script>
 </html>

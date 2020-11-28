@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Belajar Bootstrap</title>
-<link href="template/css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -51,5 +51,5 @@
  </div>
 </div>
 </body>
-<script src="template/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 </html>

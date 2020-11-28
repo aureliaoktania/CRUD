@@ -33,25 +33,25 @@
          <div class="form-group">
    
                     <label>Product Name</label>
-                    <input type="text" class="form-control product_name" name="product_name">
+                    <input type="text" class="form-control productName" name="productName">
                 </div>
                 <div class="form-group">
                     <label>Product Code</label>
-                    <input type="text" class="form-control product_code" name="product_code" >
+                    <input type="text" class="form-control productCode" name="productCode" >
                 </div>
                 <div class="form-group">
                     <label>Category</label>
-                    <input type="text" class="form-control product_category" name="product_category">
+                    <input type="text" class="form-control productCategory" name="productCategory">
                 </div>
                 <div class="form-group">
                     <label>Price</label>
-                    <input type="text" class="form-control product_price" name="product_price" >
+                    <input type="text" class="form-control productPrice" name="productPrice" >
                 </div>
                 <div class="form-group">
                     <label>Stock Count</label>
-                    <input type="text" class="form-control product_stock" name="product_stock" >
+                    <input type="text" class="form-control productStock" name="productStock" >
                 </div>
-                <button type="submit" class="btn btn-primary float-right">Add</button>
+                <button type="submit" class="btn btn-primary float-right">Save</button>
   </form>
   </div>
 </body>

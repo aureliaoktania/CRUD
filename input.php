@@ -30,6 +30,7 @@
     </div>
 
   <div class="container-md">
+    <form action="insert.php" method="POST">
          <div class="form-group">
    
                     <label>Product Name</label>

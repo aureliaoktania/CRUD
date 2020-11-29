@@ -80,16 +80,16 @@ echo "<tr>";
         "<td>" . $row["Code"]."</td>". 
         "<td>" . $row["Category"]. "</td>". 
         "<td>" . $row["Price"]. "</td>". 
-        "<td>" . $row["StockCount"]. "</td>".
-        "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>"; ?> 
-        <a class="btn btn-danger " data-toggle="modal" data-target="#delete">Delete</a> </td>
+        "<td>" . $row["StockCount"]. "</td>";
+        ?>
+        <td> <a class="btn btn-success btn-sm" href="edit.php" role="Button"> Edit </a>  
+        <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete<?php echo $row["Code"]?>" role="Button"> Delete</a> </td>
  <?php
 echo "</tr>";
  }
 } else {
  echo "0 results";
 }
-mysqli_close($db);
 ?>
    </table>
   </div>
@@ -97,27 +97,47 @@ mysqli_close($db);
 </div>
   
 
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "toystown";
+$db = mysqli_connect($servername, $username, $password, $dbname);
+if (!$db) {
+ die("Connection failed: " . mysqli_connect_error());
+}
+$sql = "SELECT  Code FROM inventory";
+$result = mysqli_query($db, $sql);
+if (mysqli_num_rows($result) > 0) {
+ while($row = mysqli_fetch_assoc($result)) {
+   ?>
 
-<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="delete<?php echo $row["Code"]?>" tabindex="-1"  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Missed Confirm</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+      <form action="delete.php" method="post">
+      <input type="hidden" name="product_id" value="<?php echo $row["Code"];?>" readonly>
+        Do you Fucking missed me?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-danger">Confirm</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
-  
+
+ <?php }} ?>
+
 </body>
-<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
 </html>

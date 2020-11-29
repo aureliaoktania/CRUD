@@ -12,9 +12,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $sql = "INSERT INTO inventory (ProductName, Code, Category,Price,StockCount)VALUES ('$Pname', '$Pcode',' $Pcategory','$Pprice','$Pstock')";
 if (mysqli_query($db, $sql)) {
- echo "Udah bisa, Makaseih :).";
+    header("location: menu.php");
 } else {
- echo "Ade yang salah same die: " . $sql . "<br>" . mysqli_error($db);
+ echo "ERROR" . $sql . "<br>" . mysqli_error($db);
 }
 mysqli_close($db);
 }

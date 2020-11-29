@@ -13,10 +13,10 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="lu tambahin ae mau kemane">Display<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="./menu.php">Display<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="jee mau kemane ">Input</a>
+            <a class="nav-link" href="./input.php">Input</a>
           </li>
         </ul>
       </div>

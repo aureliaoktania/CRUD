@@ -14,7 +14,7 @@
 
  if($count == 1) {
  $_SESSION['login_user'] = $user;
-
+ header("location: menu.php");
 echo ":D";
  }else {
  echo "Your username or password is invalid";
@@ -27,15 +27,26 @@ echo "<br />";
 
  <head>
  <title>Login Page</title>
-
+ <link href="./css/bootstrap.min.css" rel="stylesheet">
  </head>
 
  <form action ="" method = "post">
- <label>UserName:</label><input type = "text" name = "username"
-value="your username" /><br /><br />
- <label>Password:</label><input type = "password" name = "password" value
-="your pass" /><br/><br />
- <input type = "submit" value = " Submit "/><br />
+        <div class="container">
+            <h1>LOG IN</h1>
+        <div class="row">
+        <div>
+        Username
+        <input type="text" name="username" value="your username" class="form-control" value=""/><hr>
+
+        Password
+        <input type="text" name="password" class="form-control" value="your password"/><hr> <br>
+
+        <input type="submit" name="submit" class="btn btn-primary float-none" value="Submit"/>
+        </div>
+         </div>
  </form>
+
+
  </body>
+ <script src="./js/bootstrap.min.js"></script>
 </html>

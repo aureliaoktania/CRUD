@@ -1,4 +1,3 @@
-<html>
 <head>
 <title>Toys Town</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -13,10 +12,10 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="lu tambahin ae mau kemane">Display<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="./menu.php">Display<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="jee mau kemane ">Input</a>
+            <a class="nav-link" href="./input.php">Input</a>
           </li>
         </ul>
       </div>
@@ -30,7 +29,7 @@
     </div>
 <div class="container">
 <h1>Filter</h1>
-<button type="button" class="btn btn-primary float-right">Add New</button> <br>
+<button type="button" class="btn btn-light btn-outline-primary float-right" ><a href= "./input.php">Add New</a></button> <br>
  <div class="row">
   <div>
    Name
@@ -41,8 +40,8 @@
 </div>
  </div>
 
- <input type="submit" name="filter" class="btn btn-primary" value="Search"/>
- <input type="submit" name="filter" class="btn btn-secondary" value="Reset"/> <br> <br>
+ <input type="submit" name="submit" class="btn btn-primary" value="Search"/>
+ <input type="submit" name="reset" class="btn btn-secondary" value="Reset"/> <br> <br>
 
  <div class="row">
   <div class="col-md-12">
@@ -55,42 +54,42 @@
      <th>Stock Account</th>
      <th>Action</th>
     </tr>
-    <tr>
-     <td>1</td>
-     <td>100120</td>
-     <td>Orga</td>
-     <td>Jakarta Barat No 58</td>
-     <td>50</td>
-     <td><button type="button" class="btn btn-success btn-sm">Edit</button>
-      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-    </tr>
-    <tr>
-     <td>2</td>
-     <td>100121</td>
-     <td>Mikazuki</td>
-     <td>Depok</td>
-     <td>50</td>
-     <td><button type="button" class="btn btn-success btn-sm">Edit</button>
-      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-    </tr>
-    <tr>
-     <td>3</td>
-     <td>100122</td>
-     <td>Akihiro</td>
-     <td>Jakarta Pusat No 100</td>
-     <td>50</td>
-     <td><button type="button" class="btn btn-success btn-sm">Edit</button>
-      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-    </tr>
-    <tr>
-     <td>4</td>
-     <td>100123</td>
-     <td>Lia</td>
-     <td>Jakarta Selatan,Lebak Bulus</td>
-     <td>50</td>
-     <td><button type="button" class="btn btn-success btn-sm">Edit</button>
-      <button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-    </tr>
+   
+     <!-- <td><button type="button" class="btn btn-success btn-sm">Edit</button>
+      <button type="button" class="btn btn-danger btn-sm">Delete</button></td> -->
+
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "toystown";
+// Create connection
+$db = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$db) {
+ die("Connection failed: " . mysqli_connect_error());
+}
+//Display records
+$sql = "SELECT ProductName, Code, Category, Price, StockCount FROM inventory";
+$result = mysqli_query($db, $sql);
+if (mysqli_num_rows($result) > 0) {
+// output data of each row
+ while($row = mysqli_fetch_assoc($result)) {
+echo "<tr>";
+ echo "<td>" . $row["ProductName"]. "</td>" .
+        "<td>" . $row["Code"]."</td>". 
+        "<td>" . $row["Category"]. "</td>". 
+        "<td>" . $row["Price"]. "</td>". 
+        "<td>" . $row["StockCount"]. "</td>".
+        "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>
+        <a class=\"btn btn-danger btn-sm\" href=\"edit.php\" role=\"Button\"> Delete </a>"; 
+echo "</tr>";
+ }
+} else {
+ echo "0 results";
+}
+mysqli_close($db);
+?>
    </table>
   </div>
  </div>

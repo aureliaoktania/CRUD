@@ -1,4 +1,4 @@
-<head>
+  <head>
 <title>Toys Town</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -81,9 +81,9 @@ echo "<tr>";
         "<td>" . $row["Category"]. "</td>". 
         "<td>" . $row["Price"]. "</td>". 
         "<td>" . $row["StockCount"]. "</td>".
-        "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>; ?>
-        <a class="btn btn-danger btn-sm" data-target="#delete" role="Button"> Delete </a>" 
-   <?php
+        "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>"; ?> 
+        <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#delprod?>">Delete</button> </td>
+ <?php
 echo "</tr>";
  }
 } else {

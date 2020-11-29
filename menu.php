@@ -81,8 +81,9 @@ echo "<tr>";
         "<td>" . $row["Category"]. "</td>". 
         "<td>" . $row["Price"]. "</td>". 
         "<td>" . $row["StockCount"]. "</td>".
-        "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>
-        <a class=\"btn btn-danger btn-sm\" data-target=\"#delete\" role=\"Button\"> Delete </a>"; 
+        "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>; ?>
+        <a class="btn btn-danger btn-sm" data-target="#delete" role="Button"> Delete </a>" 
+   <?php
 echo "</tr>";
  }
 } else {
@@ -95,10 +96,6 @@ mysqli_close($db);
  </div>
 </div>
   
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
 
 
 <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

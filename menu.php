@@ -82,7 +82,7 @@ echo "<tr>";
         "<td>" . $row["Price"]. "</td>". 
         "<td>" . $row["StockCount"]. "</td>".
         "<td> <a class=\"btn btn-success btn-sm\" href=\"edit.php\" role=\"Button\"> Edit </a>"; ?> 
-        <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#delprod?>">Delete</button> </td>
+        <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#delete>">Delete</button> </td>
  <?php
 echo "</tr>";
  }

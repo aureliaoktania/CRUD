@@ -32,17 +32,18 @@
 <button type="button" class="btn btn-light btn-outline-primary float-right" ><a href= "./input.php">Add New</a></button> <br>
  <div class="row">
   <div>
+  <form method="POST">
    Name
-   <input type="text" name="nama" class="form-control" value=""/><hr>
+   <input type="text" name="name" class="form-control"  value="" /><hr>
 
    Code
-   <input type="text" name="code" class="form-control" value=""/><hr> <br>
+   <input type="text" name="code" class="form-control" value="" /><hr> <br>
 </div>
  </div>
 
  <input type="submit" name="submit" class="btn btn-primary" value="Search"/>
- <input type="submit" name="reset" class="btn btn-secondary" value="Reset"/> <br> <br>
-
+ <input type="reset" name="reset" class="btn btn-secondary" value="Reset"/> <br> <br>
+</form>
  <div class="row">
   <div class="col-md-12">
    <table width="100%" class="table table-bordered table-striped">
@@ -70,7 +71,19 @@ if (!$db) {
  die("Connection failed: " . mysqli_connect_error());
 }
 //Display records
-$sql = "SELECT ProductName, Code, Category, Price, StockCount FROM inventory";
+if(ISSET($_POST['name'])){
+$search = $_POST['name'];
+$sql = "SELECT * FROM inventory WHERE productName LIKE '%$search%'";
+}else if(ISSET($_POST['code'])){
+$search = $_POST['code'];
+$sql = "SELECT * FROM inventory WHERE Code LIKE '%$search%'";
+}else if(ISSET($_POST['name']) && ISETT($_POST['code'])){
+  $search1 = $_POST['name'];
+  $search2 = $_POST['code'];
+  $sql = "SELECT * FROM inventory WHERE productName LIKE '%$search1%' OR Code LIKE '%$search2%' ";
+}else{
+$sql = "SELECT * FROM inventory";
+}
 $result = mysqli_query($db, $sql);
 if (mysqli_num_rows($result) > 0) {
 // output data of each row
